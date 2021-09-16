@@ -1,6 +1,6 @@
-## ***Descripción del proyecto InnovaSoft es un software intuitivo, dinámico y adaptable que permite controlar de forma eficaz y eficiente todos los registros de las ventas físicas y virtuales de la empresa. Asimismo garantiza un seguimiento oportuno de ellas brindando datos en tiempo real para la toma de decisiones que contribuyan a la operación normal de la compañía.***
+## **_Descripción del proyecto InnovaSoft es un software intuitivo, dinámico y adaptable que permite controlar de forma eficaz y eficiente todos los registros de las ventas físicas y virtuales de la empresa. Asimismo garantiza un seguimiento oportuno de ellas brindando datos en tiempo real para la toma de decisiones que contribuyan a la operación normal de la compañía._**
 
-## ***Contribuidores:*** 
+## **_Contribuidores:_**
 
 ### **Jose Luis Angarita Mendoza**
 
@@ -10,5 +10,4 @@
 
 ### **Adriana Paredes Salinas**
 
-
-
+### ** Sergio Orlando Rojas Parra**
