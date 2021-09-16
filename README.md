@@ -10,4 +10,4 @@
 
 ### **Adriana Paredes Salinas**
 
-### ** Sergio Orlando Rojas Parra**
+### **Sergio Orlando Rojas Parra**
