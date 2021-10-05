@@ -1,0 +1,13 @@
+[{
+  "_id": "1001857105",
+  "nombre": "Jose Angarita Mendoza",
+  "estado": "Autorizado",
+  "rol": "Administrador",
+  "email": "jose@innovasoft.com"
+},{
+  "_id": "1005675453",
+  "nombre": "Jorge Perez",
+  "estado": "Autorizado",
+  "rol": "Vendedor",
+  "email": "jorge@innovasoft.com"
+}]
