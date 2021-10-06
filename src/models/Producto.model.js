@@ -21,11 +21,9 @@ class Producto {
   }
 
   static findById(id, result) {
-    ProductoModel.findById(id, function (err, doc) {
-      if (err)
-        result(null, err);
-      else
-        result(null, new Producto(doc));
+    ProductoModel.find({$or: [{'_id':id}, {'descripcion':id}]},
+    function (err, docs){
+      if(!err) result(null, docs)
     });
   }
 
