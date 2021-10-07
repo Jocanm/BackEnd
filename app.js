@@ -5,7 +5,6 @@ const bodyParser = require('body-parser');
 // Require producto routes
 const ProductoRoutes = require('./src/routes/Producto.routes')
 const UsuarioRoutes = require('./src/routes/Usuario.routes')
-
 // create express app
 const app = express();
 // Setup server port
@@ -18,10 +17,8 @@ app.use(bodyParser.json())
 app.get('/', (req, res) => {
   res.send("NodeJs + Express + MongoDb");
 });
-
 //enable cors
 app.use(cors())
-
 // using as middleware
 app.use('/api/v1/producto', ProductoRoutes)
 app.use('/api/v1/usuario', UsuarioRoutes)

@@ -4,7 +4,7 @@ var UsuarioModel = models.UsuarioModel;
 
 class Usuario {
   constructor(Usuario) {
-    this._id= Usuario._id;
+    this._id= Usuario._id ? Usuario._id : undefined;
     this.nombre= Usuario.nombre;
     this.estado = Usuario.estado;
     this.rol= Usuario.rol;
