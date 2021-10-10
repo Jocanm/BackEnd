@@ -1,5 +1,17 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/ventas')
+
+const mongoAtlasUri = "mongodb+srv://jocanm:jlam2912@mintic.x1eaf.mongodb.net/ventas?retryWrites=true&w=majority"
+try {
+    //Conectandonos al cluster de mongo
+    mongoose.connect(
+        mongoAtlasUri, { useNewUrlParser: true, useUnifiedTopology: true },
+        () => console.log("Mongoose is connected")
+    );
+
+} catch (e) {
+    console.log("could not connect");
+}
+
 var Schema = mongoose.Schema;
 
 const ProductoSchema = new Schema({
@@ -15,7 +27,7 @@ const UsuarioSchema = new Schema({
     estado: String,
     rol: String,
     email: String
-}, {collection: 'usuario'});
+}, { collection: 'usuario' });
 
 var ProductoModel = mongoose.model('producto', ProductoSchema);
 var UsuarioModel = mongoose.model('usuario', UsuarioSchema);
@@ -29,5 +41,7 @@ const UserDataSchema = new Schema({
 var UserDataModel = mongoose.model('user-data', UserDataSchema);
 
 module.exports = {
-    ProductoModel, UserDataModel, UsuarioModel
+    ProductoModel,
+    UserDataModel,
+    UsuarioModel
 };
