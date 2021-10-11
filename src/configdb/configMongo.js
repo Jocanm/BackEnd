@@ -29,8 +29,18 @@ const UsuarioSchema = new Schema({
     email: String
 }, { collection: 'usuario' });
 
+const VentasSchema = new Schema({
+    idV: String,
+    fechaVenta: String,
+    estado: String,
+    valorTotal: Number,
+    idC: String,
+    nombreCliente: String
+}, {collection: 'crearVentya' });
+
 var ProductoModel = mongoose.model('producto', ProductoSchema);
 var UsuarioModel = mongoose.model('usuario', UsuarioSchema);
+var VentasModel = mongoose.model('crearVentya', VentasSchema);
 
 //esquema y modelo userdata
 const UserDataSchema = new Schema({
@@ -43,5 +53,6 @@ var UserDataModel = mongoose.model('user-data', UserDataSchema);
 module.exports = {
     ProductoModel,
     UserDataModel,
-    UsuarioModel
+    UsuarioModel,
+    VentasModel
 };

@@ -2,9 +2,10 @@ const express = require('express');
 var cors = require('cors')
 const bodyParser = require('body-parser');
 
-// Require producto routes
+// Require collections routes
 const ProductoRoutes = require('./src/routes/Producto.routes')
 const UsuarioRoutes = require('./src/routes/Usuario.routes')
+const VentaRoutes = require('./src/routes/Venta.routes')
 // create express app
 const app = express();
 // Setup server port
@@ -22,6 +23,7 @@ app.use(cors())
 // using as middleware
 app.use('/api/v1/producto', ProductoRoutes)
 app.use('/api/v1/usuario', UsuarioRoutes)
+app.use('/api/v1/venta', VentaRoutes)
 
 // listen for requests
 app.listen(port, () => {
