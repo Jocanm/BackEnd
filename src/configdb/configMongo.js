@@ -1,6 +1,9 @@
 var mongoose = require('mongoose');
+const dotenv = require('dotenv')
 
-const mongoAtlasUri = "mongodb+srv://jocanm:jlam2912@mintic.x1eaf.mongodb.net/ventas?retryWrites=true&w=majority"
+dotenv.config({path:'./.env'})
+
+const mongoAtlasUri = process.env.DATABASE_URL;
 try {
     //Conectandonos al cluster de mongo
     mongoose.connect(

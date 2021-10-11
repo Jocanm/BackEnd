@@ -16,6 +16,10 @@ bower_components/
 # IDEs and editors
 .idea/
 
+# .env FILE
+/.env
+.env
+
 # misc
 .sass-cache/
 connect.lock/
