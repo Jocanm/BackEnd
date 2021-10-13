@@ -4,7 +4,7 @@ var VentasModel = models.VentasModel;
 
 class Ventas {
   constructor(Ventas) {
-    this.idV = Ventas.idV ? Ventas.idV : undefined;
+    this._id = Ventas._id ? Ventas._id : undefined;
     this.fechaVenta = Ventas.fechaVenta;
     this.estado = Ventas.estado;
     this.valorTotal = Ventas.valorTotal;
@@ -38,9 +38,9 @@ class Ventas {
   }
 
   static update(id, venta, result) {
-    id = venta._id;
+    venta._id = id;
 
-    VentasModel.findOneAndUpdate({ _id:id }, venta, { upsert: true }, function (err, doc) {
+    VentasModel.findOneAndUpdate({ _id: id }, venta, { upsert: true }, function (err, doc) {
       if (err)
         result(null, err);
       else {
