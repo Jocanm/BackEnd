@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-const mongoAtlasUri = "mongodb+srv://jocanm:jlam2912@mintic.x1eaf.mongodb.net/ventas?retryWrites=true&w=majority"
+const mongoAtlasUri = "mongodb+srv://adriana:adriana123@mintic.x1eaf.mongodb.net/ventas?retryWrites=true&w=majority"
 try {
     //Conectandonos al cluster de mongo
     mongoose.connect(
@@ -35,12 +35,13 @@ const VentasSchema = new Schema({
     estado: String,
     valorTotal: Number,
     idC: String,
-    nombreCliente: String
-}, {collection: 'crearVentya' });
+    nombreCliente: String,
+    encargado: String
+}, { collection: 'crearVenta' });
 
-var ProductoModel = mongoose.model('producto', ProductoSchema);
 var UsuarioModel = mongoose.model('usuario', UsuarioSchema);
-var VentasModel = mongoose.model('crearVentya', VentasSchema);
+var ProductoModel = mongoose.model('producto', ProductoSchema);
+var VentasModel = mongoose.model('crearVenta', VentasSchema);
 
 //esquema y modelo userdata
 const UserDataSchema = new Schema({

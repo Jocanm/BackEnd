@@ -9,7 +9,8 @@ class Ventas {
     this.estado = Ventas.estado;
     this.valorTotal = Ventas.valorTotal;
     this.idC = Ventas.idC;
-    this.nombreCliente = Ventas.nombreCliente
+    this.nombreCliente = Ventas.nombreCliente;
+    this.encargado = Ventas.encargado;
   }
 
   static create(newVent, result) {
