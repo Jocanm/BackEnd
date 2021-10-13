@@ -11,7 +11,7 @@ class Ventas {
     this.idC = Ventas.idC;
     this.nombreCliente = Ventas.nombreCliente;
     this.encargado = Ventas.encargado;
-    this.productos = Ventas.productos
+    this.productos = Ventas.productos;
   }
 
   static create(newVent, result) {
@@ -20,12 +20,12 @@ class Ventas {
       if (err)
         result(err, null);
       else
-        result(null, data.idV);
+        result(null, data._id);
     });
   }
 
   static findById(id, result) {
-    VentasModel.find({$or: [{'idV':idV}, {'idC':idC}, {'nombreCliente':nombreCliente}]},
+    VentasModel.find({$or: [{'_id':id}, {'idC':idC}, {'nombreCliente':nombreCliente}]},
     function (err, docs){
       if(!err) result(null, docs)
     });

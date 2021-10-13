@@ -30,7 +30,7 @@ const UsuarioSchema = new Schema({
 }, { collection: 'usuario' });
 
 const VentasSchema = new Schema({
-    _id: String,
+    //_id: String,
     fechaVenta: String,
     estado: String,
     valorTotal: Number,
