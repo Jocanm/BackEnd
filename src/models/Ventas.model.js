@@ -11,6 +11,7 @@ class Ventas {
     this.idC = Ventas.idC;
     this.nombreCliente = Ventas.nombreCliente;
     this.encargado = Ventas.encargado;
+    this.productos = Ventas.productos
   }
 
   static create(newVent, result) {
@@ -37,9 +38,9 @@ class Ventas {
   }
 
   static update(id, venta, result) {
-    venta.idV = idV;
+    id = venta._id;
 
-    VentasModel.findOneAndUpdate({ idV: idV }, venta, { upsert: true }, function (err, doc) {
+    VentasModel.findOneAndUpdate({ _id:id }, venta, { upsert: true }, function (err, doc) {
       if (err)
         result(null, err);
       else {

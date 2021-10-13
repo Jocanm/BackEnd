@@ -36,7 +36,8 @@ const VentasSchema = new Schema({
     valorTotal: Number,
     idC: String,
     nombreCliente: String,
-    encargado: String
+    encargado: String,
+    productos: Array
 }, { collection: 'crearVenta' });
 
 var UsuarioModel = mongoose.model('usuario', UsuarioSchema);
