@@ -9,7 +9,7 @@ const callbackGenerico = (res) =>{
             res.status(500).send("Error manipulando los datos")
         }else{
             res.json(resultado)
-            console.log(resultado)
+            // console.log(resultado)
         }
     }
 }
