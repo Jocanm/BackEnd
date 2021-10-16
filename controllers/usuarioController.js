@@ -33,6 +33,13 @@ export const consultarOcrearUsuario = async(req,callback)=>{
                 callback(err,res)
             }
             else{
+                //Reestructuramos el nombre:
+                let nombreLista = user.name.split(" ");
+                for (var i = 0; i < nombreLista.length; i++) {
+                    nombreLista[i] = nombreLista[i].charAt(0).toUpperCase() + nombreLista[i].slice(1).toLowerCase();
+                }
+                let name = nombreLista.join(" ");
+                user.name = name;
                 user.auth0ID = user._id;
                 delete user._id;
                 user.estado = "Pendiente"
