@@ -1,5 +1,5 @@
 import Express from 'express';
-import { buscarUsuarios, crearUsuario, eliminarUsuario, actualizarUsuario } from '../controllers/usuarioController.js';
+import { buscarUsuarios, crearUsuario, eliminarUsuario, actualizarUsuario, consultarOcrearUsuario } from '../controllers/usuarioController.js';
 
 const rutasUsuario = Express.Router()
 
@@ -23,6 +23,11 @@ rutasUsuario.route('/usuarios').get((req,res)=>{
 //RUTA PARA CREAR VENTA
 rutasUsuario.route("/usuarios").post((req,res)=>{
     crearUsuario(req.body,callbackGenerico(res))
+})
+
+rutasUsuario.route('/usuarios/self').get((req,res)=>{
+    // console.log("Alguien hizo get en la ruta Self");
+    consultarOcrearUsuario(req,callbackGenerico(res))
 })
 
 //RUTA PARA ACTUALIZAR VENTA
