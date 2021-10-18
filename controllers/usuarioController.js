@@ -29,10 +29,12 @@ export const consultarOcrearUsuario = async(req,callback)=>{
         async (err,res)=>{
             // console.log(res)
             if(res){
-                //4. si no está lo crea y devuelve la info
+                //3. si ya existe solo devuelve la info
                 callback(err,res)
             }
             else{
+                //4. como no existe lo creamos.
+                
                 //Reestructuramos el nombre:
                 let nombreLista = user.name.split(" ");
                 for (var i = 0; i < nombreLista.length; i++) {
@@ -44,10 +46,9 @@ export const consultarOcrearUsuario = async(req,callback)=>{
                 delete user._id;
                 user.estado = "Pendiente"
                 user.rol = "Sin rol"
-                //3. si ya existe devuelve la info
                 await crearUsuario(user,(err,resp)=>{
                     console.log("\n-----CREANDO NUEVO USUARIO-----\n")
-
+                    
                     return callback(err,user)
                 })
             }
