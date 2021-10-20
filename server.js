@@ -8,10 +8,11 @@ import rutasVenta from './views/rutaVenta.js'
 import jwt from "express-jwt";
 import jwks from 'jwks-rsa'
 
-
 dotenv.config({
     path: "./.env"
 })
+
+const port = process.env.PORT || 5000;
 
 const app = Express()
 app.use(Express.json())
@@ -36,8 +37,8 @@ app.use(rutasUsuario)
 app.use(rutasVenta)
 
 const main = () => {
-    return app.listen(process.env.PORT, () => {
-        console.log(`Corriendo en el puerto ${process.env.PORT}`)
+    return app.listen(port, () => {
+        console.log(`Corriendo en el puerto ${port}`)
     })
 }
 
